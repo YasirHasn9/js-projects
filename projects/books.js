@@ -1,66 +1,4 @@
 
-/*
-In OOP , class is an extensible template to create objects. And also provides values and implementation 
-behavior.
-
-syntax 
-class MyClass {
-    constructor(){...}
-    methods1
-    methods2
-}
-to use it 
-let myClass = new MyClass()
-when using the new keyword
-1.new object is created 
-2.constructor runs with given argument
-*/
-
-class User{
-    constructor(name){
-        this.name = name
-    }
-
-    sayHi(){
-        console.log(`Hello ${this.name}`)
-    }
-}
-// class is kinda of a function 
-// proof
-console.log(typeof User)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class BookInfo{
     constructor(book , author , ISBN , numCopies){
         this.book = book 
@@ -91,6 +29,30 @@ class BookInfo{
         this.numCopies += numOfBook
     }
 }
+
+
+
+
+class TechnicalBook extends BookInfo{
+    constructor(edition,book , author , ISBN , numCopies){
+        super(book , author , ISBN , numCopies)
+        this.edition = edition
+    }
+
+    getEdition = () => {
+        return `
+        Edit is ${this.edition}
+        Book is ${this.book}
+        Director is ${this.author}
+        ISBN is ${this.ISBN}
+        Copies is ${this.numCopies}
+        `
+    }
+}
+
+let technical = new TechnicalBook("Edit" , "Title" , "Author",1291 , 33)
+
+console.log(technical.getEdition())
 
 
 
@@ -135,25 +97,3 @@ BookFun.prototype.restock = function(addCopies = 5){
 // console.log(HangerGames.getAvailability())
 // HangerGames.sell(17)
 // console.log(HangerGames.getAvailability())
-
-
-class TechnicalBook extends BookInfo{
-    constructor(edition){
-        super()
-        this.edition = edition
-    }
-
-    getEdition = () => {
-        return `
-        Edit is ${this.edition}
-        Title is ${this.title}
-        Director is ${this.author}
-        ISBN is ${this.ISBN}
-        Copies is ${this.numCopies}
-        `
-    }
-}
-
-let technical = new TechnicalBook("Edit" , "Title" , "Author",1291 , 33)
-
-console.log(technical.getEdition())

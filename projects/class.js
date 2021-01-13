@@ -117,6 +117,8 @@ Child  ------------->    constructor
                             |
                             |
                       new Child()
+
+the engine will check bottom-up
  */
 
 class Rabbit extends Animal{
