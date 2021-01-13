@@ -51,3 +51,8 @@ class MovieCla{
 }
 let movieC = new MovieCla("God of Father" , "Yasir Hassan" , "Classic" , 1972 , "5 star")
 console.log(movieC.getOverview())
+
+
+
+// we can use both function and class but with classes we can encapsulate the functionality , which in my opinion more simple and easy to read.
+
