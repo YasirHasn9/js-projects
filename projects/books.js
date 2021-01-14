@@ -34,7 +34,7 @@ class BookInfo{
 
 
 class TechnicalBook extends BookInfo{
-    constructor(edition,book , author , ISBN , numCopies){
+    constructor(book , author , ISBN , numCopies, edition){
         super(book , author , ISBN , numCopies)
         this.edition = edition
     }
@@ -50,7 +50,7 @@ class TechnicalBook extends BookInfo{
     }
 }
 
-let technical = new TechnicalBook("Edit" , "Title" , "Author",1291 , 33)
+let technical = new TechnicalBook("The 48 laws of power" , "Robert Greene" ,1291 , 33 , "Fifth")
 
 console.log(technical.getEdition())
 
