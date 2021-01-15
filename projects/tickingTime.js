@@ -29,3 +29,5 @@ function ticking(){
         node.textContent = date
     } , 1000)
 }
+
+// destructuring

@@ -97,3 +97,4 @@ BookFun.prototype.restock = function(addCopies = 5){
 // console.log(HangerGames.getAvailability())
 // HangerGames.sell(17)
 // console.log(HangerGames.getAvailability())
+
