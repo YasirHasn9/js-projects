@@ -25,3 +25,4 @@ function totalMenu(...args){
 }
 
 console.log(totalMenu(truck1, truck2 ,  truck3))
+
